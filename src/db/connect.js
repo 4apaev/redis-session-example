@@ -18,7 +18,7 @@ export default Client
 Client.once('connect', async () => {
     console.log('Client Connected')
 
-    await Client.hSet('user:admin@shoshi.dog', {
+    await Client.hSet('user:' + ADMIN_MAIL, {
         name: 'admin',
         mail: ADMIN_MAIL,
         pass: sign(ADMIN_PASS),
