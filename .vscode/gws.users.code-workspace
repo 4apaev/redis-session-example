@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "..",
+      "name": "redis-session-example",
+    },
+  ],
+
+  "settings": {
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+      "dockerfile.app": ".env*, docker-compose.yml",
+      "package.json": "*.json, .git*, *.md, .eslintrc.yml"
+    },
+
+  }
+}

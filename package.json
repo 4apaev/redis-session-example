@@ -1,0 +1,32 @@
+{
+  "name"    : "redis-session-example",
+  "author"  : "Michael Miretsky",
+  "version" : "0.0.1",
+  "license" : "MIT",
+  "type"    : "module",
+  "main"    : "src/index.js",
+
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:4apaev/redis-session-example.git"
+  },
+
+  "scripts": {
+    "up"    : "docker-compose up --build -d",
+    "down"  : "docker-compose down",
+
+    "start" : "set -a; . ./.env; set +a; node src/index.js",
+    "serve" : "set -a; . ./.env; set +a; node src/index.js 2>&1 > out.log &",
+    "test"  : "set -a; . ./.env; set +a; node --experimental-test-coverage src/**/*.spec.js",
+    "watch" : "set -a; . ./.env; set +a; node --watch-path=./src"
+  },
+
+  "dependencies": {
+    "redis": "^4.6.7"
+  },
+
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "eslint": "^8.47.0"
+  }
+}

@@ -1,0 +1,6 @@
+.DS_Store
+.env
+.idea
+*.pem
+*.log
+node_modules
