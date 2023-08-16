@@ -1,17 +1,14 @@
 version: '3.8'
 
 services:
-  redis:
+  db:
     image: redis:alpine
-    container_name: redis
-    env_file: .env
-    ports:
-      - 6379:6379
+    container_name: db
 
   app:
     image: app:latest
     container_name: app
-    env_file: .env
+    env_file: ./.env
 
     ports:
       - 3000:3000
@@ -20,4 +17,4 @@ services:
       dockerfile: dockerfile.app
 
     depends_on:
-      - redis
+      - db

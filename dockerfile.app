@@ -1,4 +1,5 @@
-FROM node:alpine as base
+# FROM node:alpine as base
+FROM node:alpine
 
 WORKDIR /app
 
@@ -8,5 +9,5 @@ COPY ./*.json .
 
 RUN npm ci --production
 
-FROM base as production
+# FROM base as production
 CMD [ "node", "src/index.js" ]
