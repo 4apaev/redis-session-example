@@ -1,11 +1,11 @@
-import Router from './routes/router.js'
+import Server from './routes/router.js'
 
 const {
     APP_PORT,
     APP_NAME,
 } = process.env
 
-Router.listen(APP_PORT, () =>
+Server.listen(APP_PORT, () =>
     console.table({
         name: APP_NAME,
         port: +APP_PORT,

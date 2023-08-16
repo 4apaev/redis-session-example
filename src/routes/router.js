@@ -6,13 +6,13 @@ import reader, { withBody } from '../mw/reader.js'
 
 import * as User from './user.js'
 
-export default Http.createServer(serve)
+export default Http.createServer(Router)
 
 /**
  * @param { import('http').IncomingMessage } rq
  * @param { import('http').ServerResponse } rs
  */
-async function serve(rq, rs) {
+async function Router(rq, rs) {
     logger(rq, rs)
     init(rq, rs)
 
