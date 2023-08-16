@@ -1,8 +1,8 @@
 import { createHmac } from 'crypto'
 
 const {
-    TOKEN_LINK = '05c2faefc758c',
-    TOKEN_SECRET = 'a75e7f4e00092',
+    TOKEN_LINK,
+    TOKEN_SECRET,
 } = process.env
 
 /////////////////////////////////////////////////////////////////////
